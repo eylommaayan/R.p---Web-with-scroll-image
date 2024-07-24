@@ -16,7 +16,20 @@ const Contact = () => {
       <div className="c-bg"></div>
       <div className="c-wrapper">
         <div className="c-left">
-          <h1 className="c-title">Lets discuss your project</h1>
+          <p className="c-desc">
+            <b>What’s your story?</b> Get in touch. Always available for
+            freelancing if the right project comes along. me.
+          </p>
+          <form ref={formRef} onSubmit={handleSubmit}>
+            <input type="text" placeholder="Name" name="user_name" />
+            <input type="email" placeholder="Email" name="user_email" />
+            <input type="text" placeholder="Subject" name="subject" />
+            <textarea rows="5" placeholder="Message" name="message" />
+            <button>שלח</button>
+          </form>
+        </div>
+        <div className="c-right">
+          <h1 className="c-title">בוא נסתום את הבעיה</h1>
           <div className="c-info">
             <div className="c-info-item">
               <img src={Phone} alt="Phone" className="c-icon" />
@@ -31,19 +44,6 @@ const Contact = () => {
               123 Address St, City, Country
             </div>
           </div>
-        </div>
-        <div className="c-right">
-          <p className="c-desc">
-            <b>What’s your story?</b> Get in touch. Always available for
-            freelancing if the right project comes along. me.
-          </p>
-          <form ref={formRef} onSubmit={handleSubmit}>
-            <input type="text" placeholder="Name" name="user_name" />
-            <input type="email" placeholder="Email" name="user_email" />
-            <input type="text" placeholder="Subject" name="subject" />
-            <textarea rows="5" placeholder="Message" name="message" />
-            <button>שלח</button>
-          </form>
         </div>
       </div>
     </div>
