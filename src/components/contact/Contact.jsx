@@ -10,6 +10,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
+
   return (
     <div className="c">
       <div className="c-bg"></div>
@@ -36,11 +37,11 @@ const Contact = () => {
             <b>What’s your story?</b> Get in touch. Always available for
             freelancing if the right project comes along. me.
           </p>
-          <form ref={fromRef} onSubmit={handleSubmit}>
+          <form ref={formRef} onSubmit={handleSubmit}>
             <input type="text" placeholder="Name" name="user_name" />
-            <input type="text" placeholder="Name" name="user_name" />
-            <input type="text" placeholder="Name" name="user_name" />
-            <textarea rows="5" placeholder="הודעה" name="message" />
+            <input type="email" placeholder="Email" name="user_email" />
+            <input type="text" placeholder="Subject" name="subject" />
+            <textarea rows="5" placeholder="Message" name="message" />
             <button>שלח</button>
           </form>
         </div>
